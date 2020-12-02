@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tourism_app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="99q-Ll-IkH">
+                                <rect key="frame" x="250" y="482" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="rememberMeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vrw-a4-luu"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42x-w8-Y5A">
+                                <rect key="frame" x="74" y="566" width="254" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="LOGIN"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WLJ-nO-WQe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqc-go-ENL">
+                                <rect key="frame" x="94" y="486" width="180" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CqT-s2-ZKn">
+                                <rect key="frame" x="103" y="343" width="239" height="40.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9565028669790151" green="0.95540406102497721" blue="0.97993154624073775" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="26"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ea8-zy-AB6">
+                                <rect key="frame" x="102" y="401" width="241" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95650286699999998" green="0.95540406099999997" blue="0.9799315462" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEg-u6-fCB">
+                                <rect key="frame" x="74" y="623" width="254" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="REGISTER"/>
+                                <connections>
+                                    <segue destination="0wX-HJ-TWC" kind="show" identifier="fromLoginToRegisterSegue" id="xb5-66-5qG"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Re-hX-hCW">
+                                <rect key="frame" x="94" y="78" width="240" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pass" translatesAutoresizingMaskIntoConstraints="NO" id="ptX-TU-F0u">
+                                <rect key="frame" x="45" y="404" width="45" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="CkJ-T3-eEk">
+                                <rect key="frame" x="41" y="345" width="53" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.82233330572635188" blue="0.83443127284913654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mAM-1Y-cWm"/>
+                    <connections>
+                        <outlet property="password" destination="ea8-zy-AB6" id="cDD-Ts-Kjl"/>
+                        <outlet property="rememberMe" destination="99q-Ll-IkH" id="1co-CW-4ri"/>
+                        <outlet property="username" destination="CqT-s2-ZKn" id="nof-Q0-SUF"/>
+                        <segue destination="04x-PH-iP2" kind="show" identifier="fromLoginToAttractionSegue" id="Zli-IB-Bfp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-397.10144927536237" y="128.57142857142856"/>
+        </scene>
+        <!--Register Screen-->
+        <scene sceneID="XOe-RU-hs4">
+            <objects>
+                <viewController id="0wX-HJ-TWC" customClass="RegisterScreen" customModule="tourism_app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4u9-jZ-t00">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec6-xO-Rex">
+                                <rect key="frame" x="47" y="424" width="306" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="REGISTER"/>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="0wX-HJ-TWC" eventType="touchUpInside" id="7je-Dn-kL5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0X2-eR-ta4">
+                                <rect key="frame" x="47" y="481" width="306" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="I ALREADY HAVE AN ACCOUNT"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Vcn-bz-Euu"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WlH-tt-cSq">
+                                <rect key="frame" x="95" y="281" width="241" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95650286699999998" green="0.95540406099999997" blue="0.9799315462" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yzn-NK-Wgz">
+                                <rect key="frame" x="97" y="222" width="239" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95650286699999998" green="0.95540406099999997" blue="0.9799315462" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="26"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="6Ks-Gs-LWf">
+                                <rect key="frame" x="36" y="226" width="53" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pass" translatesAutoresizingMaskIntoConstraints="NO" id="ZzR-hd-2Cy">
+                                <rect key="frame" x="40" y="287" width="44" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rck-x0-Mma"/>
+                        <color key="backgroundColor" red="1" green="0.82233330569999996" blue="0.83443127279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rqe-at-yDt"/>
+                    <connections>
+                        <outlet property="txtPassword" destination="WlH-tt-cSq" id="fC1-pQ-cvz"/>
+                        <outlet property="txtUsername" destination="yzn-NK-Wgz" id="aGY-G5-5FG"/>
+                        <segue destination="04x-PH-iP2" kind="show" identifier="fromRegisterToAttractionSegue" id="SJO-5k-FsA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eip-tt-TPM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-397.10144927536237" y="857.8125"/>
+        </scene>
+        <!--Attraction Detail Screen-->
+        <scene sceneID="AmY-KO-5gM">
+            <objects>
+                <viewController id="4ng-o1-CKg" customClass="AttractionDetailScreen" customModule="tourism_app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dCq-rF-Pr3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avenue_2" translatesAutoresizingMaskIntoConstraints="NO" id="vCb-7l-pVQ">
+                                <rect key="frame" x="20" y="64" width="371" height="226"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBW-X9-xPR">
+                                <rect key="frame" x="415" y="321" width="739" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Museum of Art of São Paulo Assis Chateaubriand is one of the most important Brazilian cultural institutions. Since November 7, 1968, it has been located on Avenida Paulista</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address: Paulista Avenue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqq-HO-QGb">
+                                <rect key="frame" x="30" y="508" width="315" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pricing: R$ 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aES-Ff-5PV">
+                                <rect key="frame" x="30" y="551" width="315" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone No.: 0123411478" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AB6-um-Csd">
+                                <rect key="frame" x="30" y="603" width="300" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rate this event:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eop-BL-Eq0">
+                                <rect key="frame" x="30" y="637" width="168" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart_black" translatesAutoresizingMaskIntoConstraints="NO" id="0L0-qL-Z3l">
+                                <rect key="frame" x="331" y="710" width="48" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pv3-Rd-NkT">
+                                <rect key="frame" x="7" y="298" width="400" height="212"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget lacus tincidunt, porta lacus vel, viverra ipsum. Aenean dignissim tempus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget lacus tincidunt, porta lacus vel, viverra ipsum. Aenean dignissim tempus.</string>
+                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BV-Md-Enr">
+                                <rect key="frame" x="7" y="5" width="42" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="&lt;&lt;">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="04x-PH-iP2" kind="show" id="5np-pK-SIa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PAULISTA AVENUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2T-2A-AfA">
+                                <rect key="frame" x="41" y="16" width="338" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGp-38-HMg">
+                                <rect key="frame" x="30" y="722" width="187" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="21"/>
+                                <state key="normal" title="Go to the website!">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToUrl:" destination="4ng-o1-CKg" eventType="touchUpInside" id="yhX-Yx-xTy"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="9qy-Rw-pB7">
+                                <rect key="frame" x="192" y="645" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.6857268214225769" green="0.59733110666275024" blue="0.086695395410060883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tk3-XF-HSz"/>
+                        <color key="backgroundColor" red="1" green="0.82233330569999996" blue="0.83443127279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nvk-kG-1YE"/>
+                    <connections>
+                        <outlet property="ivHeart" destination="0L0-qL-Z3l" id="NCX-aJ-aho"/>
+                        <outlet property="ivImage" destination="vCb-7l-pVQ" id="FeW-3a-vmd"/>
+                        <outlet property="labelAddress" destination="Eqq-HO-QGb" id="6T7-yK-qk4"/>
+                        <outlet property="labelDescription" destination="pv3-Rd-NkT" id="tCX-sX-WX0"/>
+                        <outlet property="labelPhone" destination="AB6-um-Csd" id="P2m-mm-lx2"/>
+                        <outlet property="labelPricing" destination="aES-Ff-5PV" id="FMO-Mt-UjE"/>
+                        <outlet property="labelTitle" destination="f2T-2A-AfA" id="lPk-Xr-eJC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcO-oG-zTe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1966.6666666666667" y="-196.20535714285714"/>
+        </scene>
+        <!--Wishlist-->
+        <scene sceneID="4Z7-cv-HXm">
+            <objects>
+                <viewController id="4A6-ck-0Ey" customClass="WishlistScreen" customModule="tourism_app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z6o-r4-SDn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pio-gV-yqA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.99858361480000002" green="0.82343566420000003" blue="0.83529216049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="wishlistCell" rowHeight="34" id="8ex-5B-gEc" customClass="WishlistTableViewCell" customModule="tourism_app_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="34"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8ex-5B-gEc" id="4rN-BT-uvd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oj-QD-ovf">
+                                                    <rect key="frame" x="20" y="4" width="381" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.99858361480000002" green="0.82343566420000003" blue="0.83529216049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="labelTitle" destination="9oj-QD-ovf" id="tNd-fO-xM9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5BC-aW-lFP"/>
+                        <color key="backgroundColor" red="1" green="0.82233330569999996" blue="0.83443127279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Wishlist" image="heart.fill" catalog="system" id="Eg5-D7-c0N"/>
+                    <connections>
+                        <outlet property="tableView" destination="pio-gV-yqA" id="sKN-95-6Hb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hr0-FM-kEJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="385.50724637681162" y="842.41071428571422"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="L3f-Dc-taB">
+            <objects>
+                <viewController id="ox9-te-ZQv" customClass="ProfileScreen" customModule="tourism_app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lve-CP-GUR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prof" translatesAutoresizingMaskIntoConstraints="NO" id="LRy-e0-LjK">
+                                <rect key="frame" x="49" y="154" width="296" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezd-K5-cjh">
+                                <rect key="frame" x="164" y="400" width="122" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="21"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="V2T-ii-Jy9"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logout" translatesAutoresizingMaskIntoConstraints="NO" id="5aL-9S-DDE">
+                                <rect key="frame" x="109" y="403" width="47" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rh0-SE-E5J"/>
+                        <color key="backgroundColor" red="1" green="0.82233330569999996" blue="0.83443127279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="eIK-fK-Dl2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ftl-pH-FE8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234.7826086956522" y="497.54464285714283"/>
+        </scene>
+        <!--Attractions-->
+        <scene sceneID="b7a-sX-ztS">
+            <objects>
+                <viewController id="ZeK-jp-H26" customClass="AttractionScreen" customModule="tourism_app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TSK-te-yv5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YQY-W4-DC9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.99858361480000002" green="0.82343566420000003" blue="0.83529216049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="attractionListCell" rowHeight="124" id="uAe-4C-85D" customClass="AttractionTableViewCell" customModule="tourism_app_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uAe-4C-85D" id="PBT-7c-hQe">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xau-N7-qJu">
+                                                    <rect key="frame" x="10" y="11" width="88" height="98"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKg-Nw-1Js">
+                                                    <rect key="frame" x="133" y="11" width="252" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAV-Wt-BsX">
+                                                    <rect key="frame" x="133" y="47" width="261" height="66"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Didot-Italic" family="Didot" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.99858361480000002" green="0.82343566420000003" blue="0.83529216049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="ivImage" destination="Xau-N7-qJu" id="nXg-6E-frB"/>
+                                            <outlet property="labelDescription" destination="oAV-Wt-BsX" id="c19-e5-AnJ"/>
+                                            <outlet property="labelTitle" destination="QKg-Nw-1Js" id="zdh-sl-EFv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fQl-HB-8x8"/>
+                        <color key="backgroundColor" red="1" green="0.82233330569999996" blue="0.83443127279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Attractions" image="calendar" catalog="system" id="S0d-vm-Npg"/>
+                    <navigationItem key="navigationItem" id="8cz-5H-FZe"/>
+                    <connections>
+                        <outlet property="tableViewAttraction" destination="YQY-W4-DC9" id="JKo-a9-5DO"/>
+                        <segue destination="4ng-o1-CKg" kind="show" identifier="fromListToDetailsSegue" id="UU3-Fo-egi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tmD-1j-Nzf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234.7826086956522" y="-196.20535714285714"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4Nx-sH-dJk">
+            <objects>
+                <tabBarController id="04x-PH-iP2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zif-9M-pf6"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wmd-xy-IHR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZeK-jp-H26" kind="relationship" relationship="viewControllers" id="3d9-01-eGT"/>
+                        <segue destination="4A6-ck-0Ey" kind="relationship" relationship="viewControllers" id="ZII-jv-Mk4"/>
+                        <segue destination="ox9-te-ZQv" kind="relationship" relationship="viewControllers" id="g9O-jm-O2e"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXw-It-GnB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="142"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5np-pK-SIa"/>
+        <segue reference="Vcn-bz-Euu"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="avenue_2" width="1280" height="853"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="heart_black" width="240" height="240"/>
+        <image name="logo" width="364" height="513"/>
+        <image name="logout" width="200" height="200"/>
+        <image name="pass" width="980" height="854"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="prof" width="512" height="512"/>
+        <image name="profile" width="376" height="376"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
